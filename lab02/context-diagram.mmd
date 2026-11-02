@@ -1,0 +1,21 @@
+flowchart LR
+  S([Student])
+  CL([Club leader])
+  O([Organiser])
+  A([Administrator])
+  CH[ITC Club Hub]
+  MAIL[[E-mail service]]
+  DIR[[ITC student directory]]
+
+  S -- "browse, register, cancel" --> CH
+  CH -- "event list, registration status" --> S
+  CL -- "club registration, event details" --> CH
+  CH -- "approval result, registration counts" --> CL
+  O -- "check-in scans" --> CH
+  CH -- "attendance list" --> O
+  A -- "club approvals, report request" --> CH
+  CH -- "monthly activity report" --> A
+  CH -- "confirmation, reminder request" --> MAIL
+  MAIL -- "e-mail" --> S
+  CH -- "student ID lookup" --> DIR
+  DIR -- "name and e-mail" --> CH
