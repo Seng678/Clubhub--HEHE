@@ -1,0 +1,24 @@
+# .gitignore for a C++ / CMake project
+# build output
+build/
+out/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+Testing/
+# compiled files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.pdb
+# editors and operating systems
+.vs/
+.idea/
+*.swp
+.DS_Store
