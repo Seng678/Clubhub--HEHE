@@ -32,5 +32,7 @@ Version 1.0 · 2026-11-03 · Team: HEHE
 
 ## Change Log
 | Date | Version | Description | Author |
-| :--- | :--- | :--- | :--- |
-| 2026-11-03 | 1.0 | Completed Lab-02 tasks 1 through 5, event core, and CLI | Team HEHE |
+
+| 2026-10-20 | v0.1.0 | Team, repository, failure analysis, problem statement, first build | Team HEHE |
+
+| 2026-11-03 | v0.1.0 | Completed Lab-02 tasks 1 through 5, event core, and CLI | Team HEHE |
