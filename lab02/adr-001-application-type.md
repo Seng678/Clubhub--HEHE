@@ -1,5 +1,5 @@
 # ADR-001 · Application types for ITC Club Hub
-Version 1.0 · 2026-10-28 · Status: Accepted( 2026-11-4) · Deciders: Sinath Naihouy (Product Owner), Mony Viseth Setha, Sov Kenkimseng, Phou Sekang
+Version 1.0 · 2026-10-28 · Status: Accepted (2026-11-04) · Deciders: Sinath Naihouy (Product Owner), Mony Viseth Setha, Sov Kenkimseng, Phou Sekang
 
 ## User groups
 | Group | Device | Where | Connectivity | How often | Must never fail |
