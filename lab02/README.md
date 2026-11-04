@@ -17,7 +17,7 @@ Version 1.0 · 2026-11-04 · Team: HEHE
 | `src/cli/main.cpp` | Command-line front end implementing `list-events` | Sov Kenkimseng, Phou Sekang |
 | `CMakeLists.txt` | Build targets `clubhub_core` (library) and `clubhub` (executable) | Sov Kenkimseng, Phou Sekang |
 | `data/events.csv` | Sample event dataset including valid records and the invalid row E004 | Sov Kenkimseng, Phou Sekang |
-| `lab02/challenge/offline-checkin.md` | Offline-first check-in: sequence diagram, conflict rules, QAS-07 | Phou Sekang, Sov Kenkimseng |
+| `lab02/offline-checkin.md` | Offline-first check-in: sequence diagram, conflict rules, QAS-07 | Phou Sekang, Sov Kenkimseng |
 | `include/clubhub/queued_checkin.hpp` | `QueuedCheckIn` struct and `CheckInQueue` class for the offline queue | Phou Sekang, Sov Kenkimseng |
 
 ## Inputs Reused from Lab-01
