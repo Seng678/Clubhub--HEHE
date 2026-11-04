@@ -1,0 +1,12 @@
+# Lab-02 · Classification of five applications
+Version 1.0 · 2026-10-28 · Team: Team3
+
+| # | Application | Kind | Type(s) | Where the code runs, how it is delivered | Architecture | Top 3 qualities (why) | Filled by |
+|---|---|---|---|---|---|---|---|
+| 1 | Mobile banking app: ABA Mobile | Application | Mobile native; enterprise (banking) | Phone (app store); bank servers in the data centre | Client-server, three-tier; the app only shows data and sends requests | Security (a stolen session means stolen money); availability (users cannot pay when the service is down); usability (a mistyped amount causes a wrong transfer) | Sinath Naihouy |
+| 2 | Telegram | Application | Mobile native + desktop + web; cloud SaaS | Phone, PC and browser (store, installer, URL); Telegram servers | Client-server; messages are cached on the device and synced from the cloud | Availability (messages arrive late if it is down); performance (slow delivery breaks a live chat); security (a leak exposes private chats) | Mony Viseth Setha |
+| 3 | ABS controller in a car | System | Embedded real-time | ECU inside the car; installed at the factory, updated only at a garage | Embedded control loop: wheel-speed sensors, controller, brake valves | Safety (a missed deadline means the wheels lock and the driver loses control); performance (the loop must react within milliseconds); availability (it must work on every drive) | Sov kenkimseng |
+| 4 | Moodle at ITC | Application | Web MPA; enterprise; cloud-style SaaS | Browser (URL), ITC server; PHP code and database run on the server | Three-tier: browser, web server, database | Availability (if Moodle is down during an online quiz, students cannot submit); performance (it slows down when everyone opens it at once); security (grades and answers must not be changed) | Phou Sekang |
+| 5 | Game: Mobile Legends | Application | Mobile native; game; online multiplayer | Phone (app store); game servers keep the match state | Client-server; the client draws the game and the server decides the result | Performance (lag in a match means losing a fight); availability (a server crash ends the match); security (cheating ruins fairness) | Sinath Naihouy |
+
+Biggest difference we found: The ABS controller is a system with a hard deadline and a safety risk, so a late answer is a failure. The other four are applications where lateness only makes the user wait or lose some money or time.
