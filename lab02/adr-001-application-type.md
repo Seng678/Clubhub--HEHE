@@ -1,10 +1,10 @@
 # ADR-001 · Application types for ITC Club Hub
-Version 1.0 · 2026-10-28 · Status: Proposed · Deciders: Sinath Naihouy (Product Owner), Mony Viseth Setha, Sov Kenkimseng, Phou Sekang
+Version 1.0 · 2026-10-28 · Status: Accepted( 2026-11-4) · Deciders: Sinath Naihouy (Product Owner), Mony Viseth Setha, Sov Kenkimseng, Phou Sekang
 
 ## User groups
 | Group | Device | Where | Connectivity | How often | Must never fail |
 |---|---|---|---|---|---|
-| Students (~3,000) | Android / iPhone | Anywhere on campus or at home | Mobile data, sometimes weak | A few times a week; peak Friday evening | Registering for an event when registration opens |
+| Students (~100) | Android / iPhone | Anywhere on campus or at home | Mobile data, sometimes weak | A few times a week; peak Friday evening | Registering for an event when registration opens |
 | Organisers | 1-2 phones per door | Room or hall entrance | Weak or overloaded Wi-Fi | A few events a week | Checking students in at the door (200 arrivals in 10 min) |
 | Administrators (2-3) | Desktop PC | Student affairs office | Stable office network | Monthly reports, club approvals | Approving clubs and producing the monthly report |
 
@@ -20,16 +20,16 @@ E. Desktop application
 |---|---|---|---|---|---|---|
 | Cost for our team in one semester (3) | 4 students, 15 weeks, one codebase is realistic | 1 | 3 | 5 | 5 | 2 |
 | Reach (3) | ~3,000 students on both Android and iPhone, no install friction | 4 | 4 | 5 | 5 | 1 |
-| Offline check-in at the door (3) | Weak Wi-Fi is the core problem for organisers | 5 | 4 | 4 | 1 | 3 |
-| Reminders (2) | Important, but e-mail is a fallback | 5 | 5 | 3 | 2 | 2 |
-| Admin report printing / desktop use (1) | Only 2-3 users, once a month | 1 | 2 | 4 | 5 | 4 |
+| Offline check-in at the door (3) | Weak Wi-Fi is the core problem for organisers | 5 | 4 | 4 | 1 | 4 |
+| Reminders (2) | Important, but e-mail is a fallback | 5 | 5 | 3 | 5 | 1 |
+| Admin report printing / desktop use (1) | Only 2-3 users, once a month | 2 | 2 | 4 | 5 | 4 |
 
 **Totals**
-- A: 3x1 + 3x4 + 3x5 + 2x5 + 1x1 = 3 + 12 + 15 + 10 + 1 = **41**
+- A: 3x1 + 3x4 + 3x5 + 2x5 + 1x2 = 3 + 12 + 15 + 10 + 2 = **42**
 - B: 3x3 + 3x4 + 3x4 + 2x5 + 1x2 = 9 + 12 + 12 + 10 + 2 = **45**
 - C: 3x5 + 3x5 + 3x4 + 2x3 + 1x4 = 15 + 15 + 12 + 6 + 4 = **52**
-- D: 3x5 + 3x5 + 3x1 + 2x2 + 1x5 = 15 + 15 + 3 + 4 + 5 = **42**
-- E: 3x2 + 3x1 + 3x3 + 2x2 + 1x4 = 6 + 3 + 9 + 4 + 4 = **26**
+- D: 3x5 + 3x5 + 3x1 + 2x5 + 1x5 = 15 + 15 + 3 + 10 + 5 = **48**
+- E: 3x2 + 3x1 + 3x4 + 2x1 + 1x4 = 6 + 3 + 12 + 2 + 4 = **27**
 
 Deal-breaker check: check-in must work without Wi-Fi.
 - D fails this outright (score 1).

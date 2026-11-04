@@ -23,8 +23,13 @@ Version 1.0 · 2026-11-04 · Team: HEHE
 ## Inputs Reused from Lab-01
 | Input File | What We Used From It | Commit Hash / Version |
 | :--- | :--- | :--- |
+<<<<<<< HEAD
 | `lab01/team-charter.md` | Problem statement, stakeholder list, and target user groups | `e35867b` |
 | `lab01/decisions.md` | Team decision rules and consensus guidelines | `c278399` |
+=======
+| `lab01/team-charter.md` | Problem statement, stakeholder list, and target user groups | e35867b |
+| `lab01/decisions.md` | Team decision rules and consensus guidelines | c278399 |
+>>>>>>> 00f1bf226810d30d99a763e76f0adcf9541260b3
 
 ## Architecture Diagrams
 ### Context Diagram
@@ -35,6 +40,11 @@ Version 1.0 · 2026-11-04 · Team: HEHE
 
 ## Change Log
 | Date | Version | Description | Author |
+<<<<<<< HEAD
 | :--- | :--- | :--- | :--- |
 | 2026-10-20 | v0.1.0 | Team, repository, failure analysis, problem statement, first build (Lab-01) | Team HEHE |
 | 2026-11-04 | 1.0 | Lab-02: tasks 1 to 5 (classification, ADR-001, quality scenarios, diagrams, event core and `list-events` CLI) and the offline check-in challenge | Team HEHE |
+=======
+|------|---------|-------------|--------|
+| 2026-11-03 | 1.0 | Tasks 1 to 5: classification, ADR-001, quality scenarios, diagrams, event core and list-events CLI | Team HEHE |
+>>>>>>> 00f1bf226810d30d99a763e76f0adcf9541260b3
