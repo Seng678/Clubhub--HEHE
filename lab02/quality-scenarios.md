@@ -4,7 +4,7 @@ Version 1.0 · 2026-10-28 · Reviewed by (Scrum Master): Mony Viseth Setha
 ## QAS-01 · Availability · written by Sinath Naihouy
 | Part | Content |
 |---|---|
-| Source | 3,000 students |
+| Source | 100 students |
 | Stimulus | Registrations open and many students try to register at the same time |
 | Environment | Friday 18:00, normal operation, peak load of about 1,500 requests in the first 10 minutes |
 | Artifact | Registration service and the Club Hub server |
