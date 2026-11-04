@@ -20,8 +20,8 @@ Version 1.0 · 2026-11-03 · Team: HEHE
 ## Inputs Reused from Lab-01
 | Input File | What We Used From It | Commit Hash / Version |
 | :--- | :--- | :--- |
-| `lab01/team-charter.md` | Problem statement, stakeholder list, and target user groups | (Run `git log -1 --format=%h -- lab01/team-charter.md` in your terminal to get this hash) |
-| `lab01/decisions.md` | Team decision rules and consensus guidelines | (Run `git log -1 --format=%h -- lab01/decisions.md` in your terminal to get this hash) |
+| `lab01/team-charter.md` | Problem statement, stakeholder list, and target user groups | e35867b |
+| `lab01/decisions.md` | Team decision rules and consensus guidelines | c278399 |
 
 ## Architecture Diagrams
 ### Context Diagram
@@ -32,7 +32,5 @@ Version 1.0 · 2026-11-03 · Team: HEHE
 
 ## Change Log
 | Date | Version | Description | Author |
-
-| 2026-10-20 | v0.1.0 | Team, repository, failure analysis, problem statement, first build | Team HEHE |
-
-| 2026-11-03 | v0.1.0 | Completed Lab-02 tasks 1 through 5, event core, and CLI | Team HEHE |
+|------|---------|-------------|--------|
+| 2026-11-03 | 1.0 | Tasks 1 to 5: classification, ADR-001, quality scenarios, diagrams, event core and list-events CLI | Team HEHE |
