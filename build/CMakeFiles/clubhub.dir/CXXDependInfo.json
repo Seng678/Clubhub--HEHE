@@ -1,0 +1,30 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "D:/ISE Lab1/Clubhub--Team3/build",
+	"dir-cur-src" : "D:/ISE Lab1/Clubhub--Team3",
+	"dir-top-bld" : "D:/ISE Lab1/Clubhub--Team3/build",
+	"dir-top-src" : "D:/ISE Lab1/Clubhub--Team3",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"D:\\ISE Lab1\\Clubhub--Team3\\include"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "D:/ISE Lab1/Clubhub--Team3/build/CMakeFiles/clubhub.dir",
+	"sources" : 
+	{
+		"CMakeFiles/clubhub.dir/src/main.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "D:/ISE Lab1/Clubhub--Team3/src/main.cpp"
+		}
+	}
+}

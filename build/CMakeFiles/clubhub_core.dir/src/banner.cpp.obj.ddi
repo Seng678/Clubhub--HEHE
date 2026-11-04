@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles\\clubhub_core.dir\\src\\banner.cpp.obj",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}
