@@ -2,55 +2,43 @@
 // Copyright (c) 2026 Team 3, ITC Club Hub contributors
 #include "clubhub/event_csv.hpp"
 #include <sstream>
-#include <stdexcept>
+#include <iostream>
 
 namespace clubhub {
 
 EventLoadResult loadEventsCsv(std::istream& in) {
     EventLoadResult result;
     std::string line;
-    int lineNo = 1;
     
+    // Skip header line
     if (!std::getline(in, line)) {
         return result;
     }
-    
+
+    size_t line_num = 1;
     while (std::getline(in, line)) {
-        ++lineNo;
-        if (!line.empty() && line.back() == '\r') {
-            line.pop_back();
-        }
-        if (line.empty()) {
-            continue;
-        }
-
-        std::istringstream lineStream(line);
-        std::string id, title, startStr, location, capStr;
+        line_num++;
+        if (line.empty()) continue;
         
-        if (!std::getline(lineStream, id, ',') ||
-            !std::getline(lineStream, title, ',') ||
-            !std::getline(lineStream, startStr, ',') ||
-            !std::getline(lineStream, location, ',') ||
-            !std::getline(lineStream, capStr, ',')) {
-            result.errors.push_back({lineNo, "row must have exactly 5 fields"});
-            continue;
-        }
-
-        std::string extraField;
-        if (std::getline(lineStream, extraField, ',')) {
-            result.errors.push_back({lineNo, "row has too many fields"});
-            continue;
-        }
-
-        try {
-            int capacity = std::stoi(capStr);
-            TimePoint start = parseTimePoint(startStr);
-            result.events.emplace_back(id, title, start, location, capacity);
-        } catch (const std::exception& e) {
-            result.errors.push_back({lineNo, e.what()});
+        std::istringstream ss(line);
+        std::string id, title, start_str, location, capacity_str;
+        
+        if (std::getline(ss, id, ',') &&
+            std::getline(ss, title, ',') &&
+            std::getline(ss, start_str, ',') &&
+            std::getline(ss, location, ',') &&
+            std::getline(ss, capacity_str, ',')) {
+            try {
+                int cap = std::stoi(capacity_str);
+                TimePoint tp = parseTimePoint(start_str);
+                result.events.emplace_back(id, title, tp, location, cap);
+            } catch (...) {
+                result.errors.push_back({(int)line_num, "Failed to parse row"});
+            }
+        } else {
+            result.errors.push_back({(int)line_num, "Malformed CSV row"});
         }
     }
-    
     return result;
 }
 

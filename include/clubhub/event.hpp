@@ -1,20 +1,15 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2026 Team 3, ITC Club Hub contributors
-// include/clubhub/event.hpp
 #pragma once
-
 #include <chrono>
 #include <string>
 
 namespace clubhub {
 
-// Minute precision is enough for club events. Times are ITC local
-// time (Asia/Phnom_Penh); this lab does no time-zone conversion.
-using TimePoint = std::chrono::sys_time<std::chrono::minutes>;
+using TimePoint = std::chrono::system_clock::time_point;
 
 class Event {
 public:
-    // Throws std::invalid_argument when a field breaks a rule.
     Event(std::string id, std::string title, TimePoint start,
           std::string location, int capacity);
 
@@ -24,7 +19,6 @@ public:
     const std::string& location() const noexcept { return location_; }
     int capacity() const noexcept { return capacity_; }
 
-    // Business rule: events in the past cannot be registered for.
     bool hasStarted(TimePoint now) const noexcept { return start_ <= now; }
 
 private:
@@ -35,10 +29,7 @@ private:
     int capacity_;
 };
 
-// "2026-10-14 14:00" -> TimePoint; throws std::invalid_argument
 TimePoint parseTimePoint(const std::string& text);
-
-// TimePoint -> "2026-10-14 14:00"
 std::string formatTimePoint(TimePoint t);
 
 } // namespace clubhub
