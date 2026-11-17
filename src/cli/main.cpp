@@ -8,7 +8,7 @@
 namespace {
 
 bool compareEvents(const clubhub::Event& a, const clubhub::Event& b) {
-    return a.start < b.start;
+    return a.start() < b.start();
 }
 
 int listEvents(const std::string& filename) {
