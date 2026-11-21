@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Team HEHE, ITC Club Hub contributors
 // include/clubhub/event_csv.hpp
 #pragma once
 

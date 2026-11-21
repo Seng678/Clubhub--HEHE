@@ -1,0 +1,10 @@
+flowchart TD
+    A[Student Registers with ID, Name, Email] --> B[Optional Consents Default to OFF]
+    B --> C{Student Opts In to SMS Reminders?}
+    C -- No --> D[Phone Remains Empty / None]
+    C -- Yes --> E[Validate Phone Format: digits, '+', spaces]
+    E -- Invalid --> F[Reject with std::invalid_argument]
+    E -- Valid --> G[Store Phone Number & Enable SMS Reminders]
+    G --> H{Student Withdraws SMS Consent?}
+    H -- Yes --> I[Erase Phone Number Immediately via reset]
+    H -- No --> G
