@@ -1,57 +1,43 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2026 Team 3, ITC Club Hub contributors
+// Copyright (c) 2026 Team HEHE, ITC Club Hub contributors
 #pragma once
 
-#include <string>
-
-#if __has_include(<optional>)
 #include <optional>
-namespace clubhub {
-    template<typename T> using optional = std::optional<T>;
-    using std::nullopt;
-}
-#else
-namespace clubhub {
-    template<typename T>
-    class optional {
-        bool has_val_ = false;
-        T val_;
-    public:
-        optional() = default;
-        optional(const T& v) : has_val_(true), val_(v) {}
-        bool has_value() const { return has_val_; }
-        explicit operator bool() const { return has_val_; }
-        const T& value() const { return val_; }
-        T& value() { return val_; }
-        void reset() { has_val_ = false; }
-    };
-    struct nullopt_t {};
-    const nullopt_t nullopt{};
-}
-#endif
+#include <string>
+#include <string_view>
 
 namespace clubhub {
 
+// Stores only the fields allowed by lab03/data-inventory.md.
 class Student {
 public:
+    // Throws std::invalid_argument for an empty id or name,
+    // or an email without '@'.
     Student(std::string id, std::string name, std::string email);
-    
+
     const std::string& id() const noexcept { return id_; }
     const std::string& name() const noexcept { return name_; }
     const std::string& email() const noexcept { return email_; }
-    
+    const std::optional<std::string>& phone() const noexcept { return phone_; }
+    bool remindersByEmail() const noexcept { return remindByEmail_; }
+
+    // Consent is explicit, separate and can be withdrawn.
     void giveSmsConsent(std::string phone);
     void withdrawSmsConsent() noexcept;
-    bool hasSmsConsent() const noexcept;
-    const std::string& smsPhone() const noexcept;
-    
+    void setEmailReminders(bool on) noexcept { remindByEmail_ = on; }
+
+    // Safe for logs: "Student{id=e2******7}", nothing else.
     std::string redacted() const;
 
 private:
     std::string id_;
     std::string name_;
     std::string email_;
-    optional<std::string> phone_;
+    std::optional<std::string> phone_;   // only with SMS consent
+    bool remindByEmail_ = false;         // opt-in: off by default
 };
 
-} // namespace clubhub
+// "e20990417" -> "e2******7"; 3 characters or fewer -> all '*'
+std::string maskId(std::string_view id);
+
+}  // namespace clubhub
