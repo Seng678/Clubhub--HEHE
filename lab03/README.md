@@ -30,7 +30,7 @@ Version 1.0 · 2026-11-21 · Authors: Mony Viseth Setha, Phou Sekang, Sinath Nai
 
 | Input | File | Version / commit |
 |-------|------|------------------|
-| Team charter | lab01/<charter file> | ce5cef6 |
+| Team charter | lab01/team-charter.md | ce5cef6 |
 | Application type | lab02/adr-001-application-type.md | 73afa8e |
 
 ## Change log
